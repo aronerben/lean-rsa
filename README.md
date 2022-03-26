@@ -5,7 +5,7 @@ It makes use of various tactic combinators and often switches between Lean's `MO
 
 The majority of LOC is used to prove RSA works even in edge-cases (e.g. where a message is not coprime to the product of the two primes). I believe the proof could be shortened a little by utilizing `mathlib` to a greater extent and using clever meta tactics to extract common parts.
 
-The `simp` tactic is never given a list of theorems to use. This means that this proof might not work in all versions of `mathlib`, as new theorems could be marked with the `[simp]` attribute, effectively alternating `simp`s behavior.
+The `simp` tactic is never given a list of theorems to use. This means that this proof might not work in all versions of `mathlib`, as new theorems could be marked with the `[simp]` attribute, effectively altering `simp`s behavior in some cases.
 
 The axiom of choice is brought in by various lemmas used throughout the proof.
 
